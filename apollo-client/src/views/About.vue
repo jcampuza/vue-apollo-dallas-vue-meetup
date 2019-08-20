@@ -14,7 +14,7 @@
     >
       <template v-slot="{ result: { data, loading, error } }">
         <!-- Some content -->
-        <div v-if="loading">Loading...</div>
+        <spinner-loader v-if="loading" :loading="true" />
         <div v-else-if="error">There was an error loading spacex info</div>
         <div v-else-if="data">
           <p>Company Name {{data.companyInfo.name}}</p>

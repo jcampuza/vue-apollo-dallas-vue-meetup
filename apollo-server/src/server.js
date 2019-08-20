@@ -11,7 +11,7 @@ const server = new ApolloServer({
 
 const app = express();
 app.use(cors());
-// app.use((req, res, next) => setTimeout(next, 5000));
+// app.use((req, res, next) => setTimeout(next, 1000));
 server.applyMiddleware({ app });
 
 app.listen({ port: process.env.PORT || 4000 }, () => {

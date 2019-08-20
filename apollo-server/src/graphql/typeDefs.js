@@ -39,10 +39,46 @@ const typeDefs = gql`
     links: HistoricalEventLink
   }
 
+  type RocketHeight {
+    meters: Float
+    feet: Float
+  }
+
+  type RocketDiameter {
+    meters: Float
+    feet: Float
+  }
+
+  type RocketMass {
+    kg: Float
+    lb: Float
+  }
+
+  type Rocket {
+    id: Int
+    active: Boolean
+    stages: Int
+    boosters: Int
+    cost_per_launch: Int
+    success_rate_pct: Int
+    first_flight: String
+    country: String
+    company: String
+    height: RocketHeight
+    diameter: RocketDiameter
+    mass: RocketMass
+    rocket_id: ID
+    rocket_name: String
+    rocket_type: String
+    wikipedia: String
+  }
+
   type Query {
     companyInfo: CompanyInfo!
     historicalEvent(id: Int): HistoricalEvent!
     historicalEvents: [HistoricalEvent]!
+    rockets: [Rocket]!
+    rocket(id: ID): Rocket
     counter: Int!
   }
 

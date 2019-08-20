@@ -9,6 +9,9 @@
           <router-link to="/about">About</router-link>
         </li>
         <li>
+          <router-link to="/rockets">Rockets</router-link>
+        </li>
+        <li>
           <router-link to="/counter">Counter</router-link>
         </li>
       </ul>
@@ -196,6 +199,26 @@ nav {
     &.router-link-exact-active {
       opacity: 1;
     }
+  }
+}
+
+.list {
+  margin: 0 auto;
+  margin: 1rem auto;
+}
+
+.card-list-item {
+  background-color: #eeeeee;
+  box-shadow: 0 1px 4px 1px rgba(0, 0, 0, 0.17);
+  padding: 1rem;
+  border-radius: 2px;
+
+  & + & {
+    margin-top: 1rem;
+  }
+
+  & > * + * {
+    margin-top: 1rem;
   }
 }
 </style>

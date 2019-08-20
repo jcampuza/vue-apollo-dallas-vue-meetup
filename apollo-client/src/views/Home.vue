@@ -20,7 +20,7 @@
       `"
     >
       <template slot-scope="{ result: { data, loading, error } }">
-        <div v-if="loading">Loading...</div>
+        <spinner-loader v-if="loading" :loading="true" />
         <div v-else-if="error">There was an error loading spacex info</div>
         <div v-else-if="data">
           <ul class="event-list">

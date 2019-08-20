@@ -19,6 +19,18 @@ const resolvers = {
       return res.data;
     },
 
+    rockets: async (_, __, { services }) => {
+      const res = await services.spaceX.getRockets();
+
+      return res.data;
+    },
+
+    rocket: async (_, { id }, { services }) => {
+      const res = await services.spaceX.getRocketById(id);
+
+      return res.data;
+    },
+
     counter: () => count
   },
 

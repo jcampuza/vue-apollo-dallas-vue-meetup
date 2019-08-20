@@ -9,14 +9,14 @@ function createSpaceXService(client) {
 
   const getRockets = () => client.get(`${BASE_URL}/rockets`);
 
-  const getRocketsById = id => client.get(`${BASE_URL}/rockets/${id}`);
+  const getRocketById = id => client.get(`${BASE_URL}/rockets/${id}`);
 
   return {
     getCompanyInfo,
     getHistoricalEvents,
     getHistoricalEventById,
     getRockets,
-    getRocketsById
+    getRocketById
   };
 }
 
